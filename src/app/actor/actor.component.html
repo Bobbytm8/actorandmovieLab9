@@ -1,6 +1,9 @@
 <div class="jumbotron text-center">
-    <h1>Actors DB System</h1>
+    <h1> Actors DB System</h1>
+    
+
   </div>
+
   <!-- The navigation bar -->
   <nav class="navbar navbar-expand-sm bg-light">
     <ul class="navbar-nav">
@@ -68,7 +71,7 @@
       </tr>
       <tr *ngFor="let item of actorsDB">
         <td>{{item.name}}</td>
-        <td>{{item.bYear}}</td>
+        <td>{{item.bYear | date}}</td>
         <td>
           <button type="submit" class="btn btn-primary" (click)="onSelectUpdate(item)">Update</button>
         </td>
@@ -97,7 +100,7 @@
       </tr>
       <tr *ngFor="let item of actorsDB">
         <td>{{item.name}}</td>
-        <td>{{item.bYear}}</td>
+        <td>{{item.bYear | date}}</td>
         <td>
           <button type="submit" class="btn btn-primary" (click)="onDeleteActor(item)">Delete</button>
         </td>
